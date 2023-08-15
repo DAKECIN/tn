@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    canvas {
+        box-sizing: border-box;
+        display: block;
+        margin: 0 auto;
+        background-color: rgb(222, 213, 213);
+    }
+</style>
+
+<body>
+
+</body>
+<script>
+    const canvas = document.createElement('canvas');
+    canvas.width = 400;
+    canvas.height = 400;
+    const ctx = canvas.getContext('2d');
+    document.body.append(canvas);
+
+    //脸的轮廓
+    ctx.beginPath();
+    ctx.arc(200, 200, 199, 0, (Math.PI / 180) * 360);
+    ctx.closePath();
+    ctx.strokeStyle = 'red';
+    ctx.stroke();
+    //左眼
+    ctx.beginPath();
+    ctx.arc(100, 150, 20, 0, (Math.PI / 180) * 360);
+    ctx.closePath();
+    ctx.strokeStyle = 'red';
+    ctx.stroke();
+    //右眼
+    ctx.beginPath();
+    ctx.arc(300, 150, 20, 0, (Math.PI / 180) * 360);
+    ctx.closePath();
+    ctx.strokeStyle = 'red';
+    ctx.stroke();
+    //嘴巴
+    ctx.beginPath();
+    ctx.arc(200, 230, 100, (Math.PI / 180) * 30, (Math.PI / 180) * 150);
+    ctx.closePath();
+    ctx.strokeStyle = 'red';
+    ctx.stroke();
+
+</script>
+
+</html>
